@@ -5,10 +5,20 @@
 
 int main()
 {
-	double a;
+	int a, b, *c, g;
 	
-//	a = c2f(50)
-	printf("Olá mundo !\n");
+	int abobrinha[10];
+	
+	c = &a;
+	c = 100;
+	a = 5;
+	b = 10;
+	
+	scanf("%i", &g);
+	
+	printf("Olá mundo ! %i %i %i %p %p\n", a, b, g, &abobrinha[0], &abobrinha[1]);
+	
+	printf("%p %p\n", abobrinha, abobrinha+1);
 
 	return 0;
 }
