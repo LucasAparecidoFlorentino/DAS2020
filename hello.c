@@ -10,6 +10,7 @@ int main()
 	int abobrinha[10];
 	
 	c = &a;
+	abobrinha[10] = 0;
 	c = 100;
 	a = 5;
 	b = 10;
