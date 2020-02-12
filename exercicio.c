@@ -2,22 +2,12 @@
 
 int main()
 {
-	int idade, *i;
+	int idade;
+	char *msgs[] = {"menor de idade \n", "maior de idade \n"};
 	
-	i = &idade;
+	scanf("%i", &idade);
 	
-	printf("Digite sua idade: \n");
-	
-	scanf("%i", i);
-	
-	if(idade>=18)
-	{
-		printf("Acesso permitido \n");
-	}
-	else
-	{
-		printf("Acesso negado \n");
-	}
+	printf("%s", msgs[idade >= 18] );
 	
 	return 0;
 }
