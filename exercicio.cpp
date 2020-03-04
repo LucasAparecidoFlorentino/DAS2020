@@ -1,21 +1,32 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-int main()
+struct aluno_t {
+	
+	char nome[50], email[50];
+	int idade;
+};
+
+int main ()
 {
-    const int LINHA=10;
-    const int COLUNA=60;
-    char nomeVendedores[LINHA][COLUNA];
-    int l;
 
-    for(int l=0; l<LINHA; l++)
-    {
-        printf("Digite o nome do %d vendedor: ", (l+1));
-        std::cin >> nomeVendedores[l];
-        printf("\n");
-    }
+	int c = 0;
 
-    for(int l=0; l<LINHA; l++)
-    {
-        printf("%s\n", nomeVendedores[l]);
-    }
+	aluno_t aluno[2];
+
+	for(;c < 2; c++){
+		printf("Nome do aluno: ");
+		scanf("%s", aluno[c].nome);
+		printf("Email do aluno: ");
+		scanf("%s", aluno[c].email);		
+		printf("Idade do aluno: ");
+		scanf("%i", &aluno[c].idade);
+	}
+
+	for(c = 0; c < 2; c++){
+		printf("Nome do aluno: %s", aluno[c].nome);
+		printf("Email do aluno: %s", aluno[c].email);
+		printf("Idade do aluno: %d", aluno[c].idade);
+	}
 }
